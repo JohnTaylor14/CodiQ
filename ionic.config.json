@@ -1,0 +1,7 @@
+{
+  "name": "CodiQ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
