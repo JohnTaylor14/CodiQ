@@ -1,22 +1,50 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from 'src/app/pages/guards/auth.guard';
+import { LoginGuard } from './pages/guards/login.guard';
+
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/login/login.module').then((m) => m.LoginPageModule), 
+      canActivate: [LoginGuard]
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () =>
+      import('./pages/cadastro/cadastro.module').then(
+        (m) => m.CadastroPageModule
+      ),
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomePageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'regras',
+    loadChildren: () =>
+      import('./pages/regras/regras.module').then((m) => m.RegrasPageModule),
+  },
+  {
+    path: 'ranking',
+    loadChildren: () =>
+      import('./pages/ranking/ranking.module').then((m) => m.RankingPageModule),
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

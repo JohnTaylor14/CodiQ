@@ -1,0 +1,93 @@
+ion-list {
+  --background: #FFFFFF;
+  --ion-item-background: #1C1C1C;
+  --ion-item-text-color: #000000;
+  --ion-item-padding-end: 20px;
+  --ion-item-padding-start: 20px;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: #fff;
+}
+
+ion-item {
+  --ion-item-text-color: #000000;
+  --ion-item-detail-color: #999999;
+  --ion-item-detail-font-size: 14px;
+  --border-style: none;
+  --padding-start: 10px;
+}
+
+ion-avatar {
+  --border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+ion-label h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+ion-label p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+
+ion-header {
+  --background: #000;
+  color: #FFFFFF;
+  font-family: 'Gugi', cursive;
+}
+
+ion-title {
+  font-size: 50px;
+  line-height: 62px;
+  text-align: center;
+}
+
+ion-toolbar{
+  --background: #000;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #FFFFFF;
+  --border-width: 0px;
+}
+
+ion-item ion-avatar {
+  --border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+ion-item ion-label h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+ion-item ion-label p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+ion-badge {
+  --background: #000;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ion-content {
+  --background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}

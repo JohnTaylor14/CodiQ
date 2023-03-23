@@ -1,0 +1,68 @@
+ion-header {
+  --background: #000;
+  color: #FFFFFF;
+  font-family: 'Gugi', cursive;
+}
+
+ion-title {
+  font-size: 50px;
+  line-height: 62px;
+  text-align: center;
+}
+
+ion-toolbar{
+  --background: #000;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #FFFFFF;
+  --border-width: 0px;
+}
+
+ion-button.custom-button {
+  display: block;
+  margin: 20px auto;
+  width: 290px;
+  height: 51px;
+  border: 7px solid #FFFFFF;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+  text-align: center;
+  --background: #000;
+  color: #FFFFFF;
+}
+
+ion-content {
+  --background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-item {
+  --background: #1C1C1C;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+ion-item ion-label {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+ion-item ion-input {
+  color: #FFFFFF;
+}
+
+ion-button[type="submit"] {
+  margin-top: 20px;
+  --background: #fff;
+  color: #000;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+p{
+  color: #FFFFFF;
+  font-weight: bold;
+}

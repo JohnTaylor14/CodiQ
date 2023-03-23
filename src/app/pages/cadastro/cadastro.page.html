@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button onclick="window.history.back()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+      <ion-label>Nickname:</ion-label>
+      <ion-input type="text" [(ngModel)]="userRegister.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input type="email" [(ngModel)]="userRegister.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Senha:</ion-label>
+      <ion-input type="password" [(ngModel)]="userRegister.password"></ion-input>
+    </ion-item>
+    <ion-button class="custom-button" expand="block" (click)="register()">Cadastrar</ion-button>
+
+</ion-content>
