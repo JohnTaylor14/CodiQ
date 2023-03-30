@@ -28,16 +28,16 @@ export class LoginPage implements OnInit {
 
   async login() {
     await this.presentloading();
-    
+
     try {
       await this.authService.login(this.userLogin);
       this.router.navigate(['/home']);
-    } catch (error: any) { 
+    } catch (error: any) {
       this.presentToast(error.message);
     } finally {
       this.loading.dismiss();
     }
-    
+
   }
 
   async presentloading() {

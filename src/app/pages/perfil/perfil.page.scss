@@ -1,11 +1,11 @@
 ion-header {
   --background: #000;
-  color: #FFFFFF;
+  color: #000;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 ion-title {
-  font-size: 50px;
+  font-size: 20px;
   line-height: 62px;
   text-align: center;
 }
@@ -17,7 +17,7 @@ ion-toolbar{
   --border-width: 0px;
 }
 
-ion-button.custom-button {
+ion-button.custom-button{
   display: block;
   margin: 20px auto;
   width: 290px;
@@ -30,7 +30,7 @@ ion-button.custom-button {
   color: #FFFFFF;
 }
 
-.buttons-container {
+buttons-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,4 +42,11 @@ ion-content {
   --background: #000;
 }
 
+ion-card{
+  --background: #1c1c1c;
+}
+
+ion-item{
+  --background: #1c1c1c;
+}
 

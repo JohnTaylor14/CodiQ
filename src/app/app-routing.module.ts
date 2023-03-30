@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-      import('./pages/login/login.module').then((m) => m.LoginPageModule), 
+      import('./pages/login/login.module').then((m) => m.LoginPageModule),
       canActivate: [LoginGuard]
   },
   {
@@ -38,6 +38,42 @@ const routes: Routes = [
     path: 'ranking',
     loadChildren: () =>
       import('./pages/ranking/ranking.module').then((m) => m.RankingPageModule),
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'icone',
+    loadChildren: () => import('./pages/icone/icone.module').then( m => m.IconePageModule)
+  },
+  {
+    path: 'assunto',
+    loadChildren: () => import('./pages/assunto/assunto.module').then( m => m.AssuntoPageModule)
+  },
+  {
+    path: 'tema-a',
+    loadChildren: () => import('./pages/tema-a/tema-a.module').then( m => m.TemaAPageModule)
+  },
+  {
+    path: 'question1-a',
+    loadChildren: () => import('./pages/question1-a/question1-a.module').then( m => m.Question1APageModule)
+  },
+  {
+    path: 'question2-a',
+    loadChildren: () => import('./pages/question2-a/question2-a.module').then( m => m.Question2APageModule)
+  },
+  {
+    path: 'question3-a',
+    loadChildren: () => import('./pages/question3-a/question3-a.module').then( m => m.Question3APageModule)
+  },
+  {
+    path: 'question4-a',
+    loadChildren: () => import('./pages/question4-a/question4-a.module').then( m => m.Question4APageModule)
+  },
+  {
+    path: 'resultado-a',
+    loadChildren: () => import('./pages/resultado-a/resultado-a.module').then( m => m.ResultadoAPageModule)
   },
 ];
 
