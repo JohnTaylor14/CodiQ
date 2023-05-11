@@ -20,14 +20,17 @@ ion-header {
   ion-button.custom-button {
     display: block;
     margin: 20px auto;
-    width: 290px;
-    height: 51px;
+    width: 90%;
+    height: 50px;
     border: 7px solid #FFFFFF;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 28px;
+    font-size: auto;
     text-align: center;
     --background: #000;
     color: #FFFFFF;
+    white-space: normal;
+    word-break: break-word;
+    border-radius: 10px;
   }
 
   .buttons-container {
