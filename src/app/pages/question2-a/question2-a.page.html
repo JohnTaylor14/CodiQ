@@ -1,31 +1,29 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Questão 2
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="question">
-    <h2>Qual é a função da placa de vídeo?</h2>
+    <h2>{{ curQuestionB.title }}</h2>
   </div>
 
   <div class="buttons-container">
-    <ion-button class="custom-button">
-      Armazenar dados
-    </ion-button>
-
-    <ion-button class="custom-button">
-      Executar programas
-    </ion-button>
-
-    <ion-button class="custom-button" routerLink="/question3-a">
-      Exibir imagens na tela
-    </ion-button>
-
-    <ion-button class="custom-button">
-      Controlar a entrada e saída de dados
+    <ion-button (click)="doAnswerB(answer)" class="custom-button"
+      *ngFor="let answer of curQuestionB.answers; let n = index;">
+      <div>
+        <tr>
+          <td>
+            <span class="number">{{ n + 1 }}</span>
+          </td>
+          <td>
+            <span class="span-text">{{ answer.description }}</span>
+          </td>
+        </tr>
+      </div>
     </ion-button>
   </div>
+
 </ion-content>

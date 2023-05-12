@@ -75,6 +75,10 @@ const routes: Routes = [
     path: 'resultado-a',
     loadChildren: () => import('./pages/resultado-a/resultado-a.module').then( m => m.ResultadoAPageModule)
   },
+  {
+    path: 'tema-b',
+    loadChildren: () => import('./pages/tema-b/tema-b.module').then( m => m.TemaBPageModule)
+  },
 ];
 
 @NgModule({
