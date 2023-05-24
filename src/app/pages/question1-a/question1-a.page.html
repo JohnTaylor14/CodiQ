@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
+      Questionário
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,17 +12,18 @@
   </div>
 
   <div class="buttons-container">
-    <ion-button (click)="doAnswer(answer)" class="custom-button"
-      *ngFor="let answer of curQuestion.answers; let n = index;">
+    <ion-button (click)="doAnswer(answer)" class="custom-button" *ngFor="let answer of curQuestion.answers; let n = index;">
       <div>
-        <tr>
-          <td>
-            <span class="number">{{ n + 1 }}</span>
-          </td>
-          <td>
-            <span class="span-text">{{ answer.description }}</span>
-          </td>
-        </tr>
+        <table>
+          <tr>
+            <td>
+              <span class="number">{{ n + 1 }}</span>
+            </td>
+            <td>
+              <span class="span-text">{{ answer.description }}</span>
+            </td>
+          </tr>
+        </table>
       </div>
     </ion-button>
   </div>

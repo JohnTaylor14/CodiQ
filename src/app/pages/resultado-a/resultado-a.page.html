@@ -6,12 +6,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-text-center" >
-  <ion-grid >
+<ion-content class="ion-text-center">
+  <ion-grid>
     <ion-row>
       <ion-col>
         <h2>Você acertou</h2>
-        <h2>4/4</h2>
+        <h2>{{ correctAnswers }}/10</h2>
       </ion-col>
     </ion-row>
 
@@ -32,7 +32,7 @@
           <ion-card-header>
             <ion-card-title>Novo Avatar Desbloqueado</ion-card-title>
           </ion-card-header>
-          </ion-card>
+        </ion-card>
       </ion-col>
     </ion-row>
 
@@ -51,7 +51,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-button expand="block" class="custom-button" routerLink="/home" >Voltar ao início</ion-button>
+        <ion-button expand="block" class="custom-button" (click)="goHome()">Voltar ao início</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

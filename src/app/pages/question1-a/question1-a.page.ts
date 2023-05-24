@@ -1,6 +1,7 @@
-import { Question, QuestionAnswer } from './../models/question';
 import { Component, OnInit } from '@angular/core';
-
+import { NavController } from '@ionic/angular';
+import { Router, NavigationExtras } from '@angular/router';
+import { Question, QuestionAnswer } from './../models/question';
 
 @Component({
   selector: 'app-question1-a',
@@ -8,9 +9,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./question1-a.page.scss'],
 })
 export class Question1APage implements OnInit {
-
-  constructor() { }
-
   questions: Question[] = [
     {
       title: "Qual é a definição de hardware em um sistema computacional?",
@@ -106,16 +104,29 @@ export class Question1APage implements OnInit {
 
   curQuestion!: Question;
   questionIndex: number = 0;
+  correctAnswers: number = 0;
+
+  constructor(private navCtrl: NavController, private router: Router) { }
 
   ngOnInit() {
-    this.curQuestion = this.questions[this.questionIndex]
+    this.curQuestion = this.questions[this.questionIndex];
   }
 
-  doAnswer(answer: QuestionAnswer){
-    if(answer.isRight){
-      this.questionIndex++;
+  doAnswer(answer: QuestionAnswer) {
+    if (answer.isRight) {
+      this.correctAnswers++;
+    }
+
+    this.questionIndex++;
+
+    if (this.questionIndex < this.questions.length) {
       this.curQuestion = this.questions[this.questionIndex];
+    } else {
+      const navigationExtras: NavigationExtras = {
+        queryParams: { correctAnswers: this.correctAnswers },
+      };
+
+      this.router.navigate(['/resultado-a'], navigationExtras);
     }
   }
-
 }
