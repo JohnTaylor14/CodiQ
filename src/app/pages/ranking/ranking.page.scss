@@ -17,6 +17,7 @@ ion-item {
   --padding-start: 10px;
 }
 
+
 ion-avatar {
   --border-radius: 50%;
   width: 60px;
@@ -90,4 +91,9 @@ ion-content {
   height: 100%;
   padding: 0;
   margin: 0;
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
 }

@@ -10,14 +10,14 @@ ion-title {
   text-align: center;
 }
 
-ion-toolbar{
+ion-toolbar {
   --background: #000;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #FFFFFF;
   --border-width: 0px;
 }
 
-ion-button.custom-button{
+ion-button.custom-button {
   display: block;
   margin: 20px auto;
   width: 90%;
@@ -33,23 +33,14 @@ ion-button.custom-button{
   border-radius: 10px;
 }
 
-buttons-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
 ion-content {
   --background: #000;
 }
 
-ion-card{
+ion-card {
   --background: #1c1c1c;
 }
 
-ion-item{
+ion-item {
   --background: #1c1c1c;
 }
-

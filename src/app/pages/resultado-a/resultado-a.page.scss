@@ -56,18 +56,18 @@ p {
 
 ion-button.custom-button {
   display: block;
-  margin: 20px;
-  width: auto;
-  height: auto;
-  border: 7px solid #FFFFFF;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: auto;
-  text-align: center;
-  --background: #000000;
-  color: #FFFFFF;
-  white-space: normal;
-  word-break: break-word;
-  border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    height: 50px;
+    border: 7px solid #FFFFFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: auto;
+    text-align: center;
+    --background: #000;
+    color: #FFFFFF;
+    white-space: normal;
+    word-break: break-word;
+    border-radius: 10px;
 }
 
 ion-card-title{

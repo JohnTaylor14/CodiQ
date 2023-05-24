@@ -1,6 +1,6 @@
-import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { NavController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -8,20 +8,32 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
+  xpAcumulado: number = 0;
 
-  constructor(private afAuth: AngularFireAuth) {}
-
+  constructor(
+    private navCtrl: NavController,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    this.route.queryParams.subscribe((params: any) => {
+      if (params && params.xpAcumulado) {
+        this.xpAcumulado = Number(params.xpAcumulado);
+      }
+    });
+  }
+
+  goToPerfil(xpAcumulado: number) {
+    this.navCtrl.navigateForward(['/perfil'], { queryParams: { xpAcumulado: xpAcumulado } });
   }
 
   async logout() {
     try {
-      await this.afAuth.signOut();
+      console.log('Realizando logout...');
+    
+      console.log('Logout realizado com sucesso');
     } catch (error) {
-      console.log(error);
+      console.error('Erro ao fazer logout:', error);
     }
   }
-
-
 }

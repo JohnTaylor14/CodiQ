@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button onclick="window.history.back()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>
       Resultado
     </ion-title>
@@ -22,7 +27,7 @@
             <ion-card-title>XP Obtido</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <h2>421</h2>
+            <h2>{{ correctAnswers * 100 }}</h2>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -43,7 +48,7 @@
             <ion-card-title>Moedas Obtidas</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <h2>100</h2>
+            <h2>{{ correctAnswers * 200 }}</h2>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -51,7 +56,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-button expand="block" class="custom-button" (click)="goHome()">Voltar ao início</ion-button>
+        <ion-button expand="block" class="custom-button" (click)="goHome()">Voltar ao Início</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
