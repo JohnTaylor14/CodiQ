@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-perfil',
@@ -9,10 +10,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PerfilPage implements OnInit {
   xpAcumulado: number = 0;
+  emailUsuarioLogado: string = '';
 
   constructor(
     private navCtrl: NavController,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private afAuth: AngularFireAuth
   ) {}
 
   ngOnInit() {
@@ -21,6 +24,19 @@ export class PerfilPage implements OnInit {
         this.xpAcumulado = Number(params.xpAcumulado);
       }
     });
+
+    this.obterEmailUsuarioLogado();
+  }
+
+  async obterEmailUsuarioLogado() {
+    try {
+      const user = await this.afAuth.currentUser;
+      if (user) {
+        this.emailUsuarioLogado = user.email || '';
+      }
+    } catch (error) {
+      console.error('Erro ao obter o email do usuário logado:', error);
+    }
   }
 
   goToPerfil(xpAcumulado: number) {
@@ -30,7 +46,7 @@ export class PerfilPage implements OnInit {
   async logout() {
     try {
       console.log('Realizando logout...');
-    
+      await this.afAuth.signOut();
       console.log('Logout realizado com sucesso');
     } catch (error) {
       console.error('Erro ao fazer logout:', error);

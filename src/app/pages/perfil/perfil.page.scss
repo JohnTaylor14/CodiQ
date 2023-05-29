@@ -44,3 +44,37 @@ ion-card {
 ion-item {
   --background: #1c1c1c;
 }
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.profile-picture figure {
+  width: 150px;
+  height: 150px;
+  margin: 0;
+}
+
+.profile-picture ion-button {
+  --border-radius: 50%;
+  --padding-start: 0;
+  --padding-end: 0;
+  width: 150px;
+  height: 150px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.email-label {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 10px;
+}

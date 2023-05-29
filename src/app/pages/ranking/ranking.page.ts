@@ -16,10 +16,10 @@ export class RankingPage {
     this.darkTheme = !this.darkTheme;
 
     if (this.darkTheme) {
-     
+
       document.body.classList.add('dark-theme');
     } else {
-    
+
       document.body.classList.remove('dark-theme');
     }
   }

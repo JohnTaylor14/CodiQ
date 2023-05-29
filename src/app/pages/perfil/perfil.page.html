@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>
       Perfil do Usuário
     </ion-title>
@@ -9,9 +12,16 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-avatar slot="start"></ion-avatar>
+      <div class="profile-picture">
+        <ion-button expand="block" class="profile-button" routerLink="/icone">
+          <figure>
+            <img src="assets/icon/icone/IconePadrão.png" alt="Foto de Perfil">
+          </figure>
+        </ion-button>
+      </div>
       <ion-card-title></ion-card-title>
       <ion-card-subtitle>Nível</ion-card-subtitle>
+      <ion-label class="email-label">{{ emailUsuarioLogado }}</ion-label>
     </ion-card-header>
 
     <ion-card-content>
@@ -23,18 +33,8 @@
         </ion-row>
       </ion-grid>
     </ion-card-content>
-
-    <ion-item>
-      <ion-button expand="block" class="custom-button" routerLink="/icone">Mudar Ícone</ion-button>
-    </ion-item>
-    <ion-item>
-      <ion-button expand="block" class="custom-button">Editar Perfil</ion-button>
-    </ion-item>
     <ion-item>
       <ion-button expand="block" color="danger" class="custom-button" (click)="logout()">Sair</ion-button>
-    </ion-item>
-    <ion-item>
-      <ion-button expand="block" class="custom-button" routerLink="/home">Voltar para Home</ion-button>
     </ion-item>
   </ion-card>
 </ion-content>

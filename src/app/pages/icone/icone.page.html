@@ -1,80 +1,27 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button onclick="window.history.back()">
-        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-      </ion-button>
+      <ion-back-button defaultHref="/perfil"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      Icones
+      Ícones
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
+  <h1 class="recompensas-titulo">Aqui estão as recompensas que você coletou ao completar os questionários</h1>
   <div class="modificar">
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6" size-md="3">
-        <ion-card>
-            <figure>
-              <img src="assets/icon/icone/iconeA.png" alt="primeiro icone">
-            </figure>
-        </ion-card>
-      </ion-col>
-      <ion-col size="6" size-md="3">
-        <ion-card>
-            <figure>
-              <img src="assets/icon/icone/icone (2).png" alt="segundo icone">
-            </figure>
-        </ion-card>
-      </ion-col>
-      <ion-col size="6" size-md="3">
-        <ion-card>
-            <figure>
-              <img src="assets/icon/icone/icone (3).png" alt="terceiro icone">
-            </figure>
-        </ion-card>
-      </ion-col>
-      <ion-col size="6" size-md="3">
-        <ion-card>
-            <figure>
-              <img src="assets/icon/icone/icone (4).png" alt="quarto icone">
-            </figure>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="6" size-md="3">
-        <ion-card>
-            <figure>
-              <img src="assets/icon/icone/icone (5).png" alt="quinto icone">
-            </figure>
-        </ion-card>
-      </ion-col>
-      <ion-col size="6" size-md="3">
-        <ion-card>
-            <figure>
-              <img src="assets/icon/icone/icone (6).png" alt="sexto icone">
-            </figure>
-        </ion-card>
-      </ion-col>
-      <ion-col size="6" size-md="3">
-        <ion-card>
-            <figure>
-              <img src="assets/icon/icone/icone (7).png" alt="setimo icone">
-            </figure>
-        </ion-card>
-      </ion-col>
-      <ion-col size="6" size-md="3">
-        <ion-card>
-            <figure>
-              <img src="assets/icon/icone/icone (8).png" alt="oitavo icone">
-            </figure>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" size-md="3" *ngFor="let icon of icons">
+          <ion-card (click)="selectIcon(icon)" class="icon-card">
+            <ion-card-content class="icon-content">
+              <img [src]="icon" [alt]="getIconAltText(icon)" class="icon-image">
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
